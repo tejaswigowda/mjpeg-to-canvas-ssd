@@ -7,7 +7,7 @@ cocoSsd.load().then(function(res){
     model = res
     console.log('done')
     $("#web-cam-btn").attr('title','Ready')
-    load_webcam();
+   setTimeout("load_webcam()", 1500);
 },function(){
     //failure
     console.log('loading tf model failed')
@@ -58,8 +58,8 @@ function draw_res_image(canvas, ctx, image, predictions){
 function drawVideoPredictions(predictions){
     const c = document.getElementById("canvas");
     const ctx = c.getContext("2d");
-    c.width = 700;
-    c.height = 500;
+    c.width = 1600
+    c.height = 1200;
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
     ctx.drawImage(video, 0, 0, ctx.canvas.width, ctx.canvas.height);
     // Font options.

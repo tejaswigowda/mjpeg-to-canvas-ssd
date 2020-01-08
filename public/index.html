@@ -32,10 +32,10 @@
             </div>
     <canvas id='canvas'>
     </canvas>
-            <video id="video" style="height:600px;width:800px" width="" height=""></video>       
+            <video id="video" style="" width="1600" height="1200"></video>       
     </header>
 
-    <canvas id='player' style='height:600px;width:800px'>
+    <canvas id='player' height=1200 width=1600 style=''>
     </canvas>
 
 
@@ -50,7 +50,7 @@
       var player = new MJPEG.Player("player", "http://127.0.0.1:1234/stream");
       player.start();
           var canvas = document.getElementById("player")
-      thestream = canvas.captureStream(20);
+      thestream = canvas.captureStream();
     </script>
 
     <!-- Custom scripts for this template -->
